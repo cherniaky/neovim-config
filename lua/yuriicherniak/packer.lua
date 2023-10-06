@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 
+	use('github/copilot.vim')
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
@@ -54,5 +56,8 @@ return require('packer').startup(function(use)
 
     use('lewis6991/gitsigns.nvim')
 
+   if PACKER_BOOTSTRAP then
+        require("packer").sync()
+   end 
 
 end)
